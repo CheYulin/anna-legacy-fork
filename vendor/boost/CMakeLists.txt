@@ -10,8 +10,8 @@ ExternalProject_Add(boost
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}
     BUILD_IN_SOURCE 1
     UPDATE_COMMAND ""
-    CONFIGURE_COMMAND ./bootstrap.sh --with-toolset=clang --with-libraries=context,coroutine2
-    BUILD_COMMAND ./b2 toolset=clang cxxflags="-stdlib=libc++" linkflags="-stdlib=libc++"
+    CONFIGURE_COMMAND ./bootstrap.sh --with-toolset=gcc --with-libraries=context,coroutine2,system,thread
+    BUILD_COMMAND ./b2 toolset=gcc
     INSTALL_COMMAND ""
 )
 

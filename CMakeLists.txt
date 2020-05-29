@@ -1,16 +1,22 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required(VERSION 2.6)
 PROJECT(Tiered-Storage)
 
-SET (CMAKE_CXX_COMPILER /usr/bin/clang++)
+# To allow CMake to locate our Find*.cmake files
+#set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+
+#SET (CMAKE_CXX_COMPILER /usr/bin/clang++)
+SET(CMAKE_CXX_COMPILER /usr/bin/g++)
 
 SET(CMAKE_CXX_FLAGS_COMMON
-    "-std=c++11 \
-    -stdlib=libc++")
+        "-std=c++11")
+#SET(CMAKE_CXX_FLAGS_COMMON
+#    "-std=c++11 \
+#    -stdlib=libc++")
 SET(CMAKE_CXX_FLAGS_DEBUG
-    "${CMAKE_CXX_FLAGS_DEBUG} \
+        "${CMAKE_CXX_FLAGS_DEBUG} \
     ${CMAKE_CXX_FLAGS_COMMON}")
 SET(CMAKE_CXX_FLAGS_RELEASE
-    "${CMAKE_CXX_FLAGS_RELEASE} \
+        "${CMAKE_CXX_FLAGS_RELEASE} \
     ${CMAKE_CXX_FLAGS_COMMON} \
     -O3")
 

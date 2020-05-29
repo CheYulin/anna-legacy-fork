@@ -11,7 +11,7 @@ ExternalProject_Add(googlebenchmark
     GIT_REPOSITORY "https://github.com/google/benchmark"
     GIT_TAG "v1.0.0"
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}
-    CMAKE_ARGS "CMAKE_CXX_COMPILER=clang++ -DCMAKE_CXX_FLAGS=-stdlib=libc++"
+    CMAKE_ARGS "CMAKE_CXX_COMPILER=g++"
     INSTALL_COMMAND ""
 )
 
